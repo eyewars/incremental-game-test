@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+/**{
+	border: solid;
+	border-color: blue;
+	border-width: 1px;
+}*/
+
+html{
+	background-color: #303841;
+	color: #B8B8B8;
+}
+
+/*HEADER *********************************************************************** */
+/*#emptyHeader {grid-area: emptyHead}*/
+#expansionContainer {grid-area: expCon;}
+#currency {grid-area: currency;}
+
+#header{
+	width: 100%;
+	height: 150px;
+	display: flex;
+	align-content: center;
+	/*display: grid;
+	grid-template-areas: "expCon currency"*/
+}
+
+#currency{
+	height: 100%;
+	width: 30%;
+	align-self: center;
+}
+
+#total{
+	width: 100%;
+	height: 100px;
+	display: flex; 
+	justify-content: center;
+	display: grid;
+	grid-template-columns: auto;
+}
+
+#gold{
+	display: flex;
+	align-self: center;
+	font-size: 40px;
+}
+
+#perSec{
+	width: 100%;
+	height: 30px;
+	display: flex; 
+	justify-content: center;
+	display: grid;
+	grid-template-columns: auto;
+}
+
+#allMult{
+	display: flex;
+	align-self: center;
+	justify-content: center;
+}
+
+#goldPerSec{
+	display: flex;
+	align-self: center;
+	justify-content: center;
+}
+
+.buttonContainer{
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.buttonContainer button{
+	width: 25%;
+	height: 100%;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	background-color: #5E1645;
+	margin: 0px 3px;
+	color: #B8B8B8;
+}
+
+.buttonContainer button:hover{
+	background-color: #51153C;
+}
+
+.tabPanel{
+	display: none;
+}
+
+#expansionContainer{
+	height: 100%;
+	width: 35%;
+}
+
+#expansionButton{
+	height: 80%;
+	width: 50%;
+	margin: 1.5% 0 0 5%;
+	background-color: #CBCA00;
+	text-align: center;
+	display: table;
+}
+
+#expansionButtonText{
+	color: #232323;
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+#expansionButton.hidden{
+	display: none;
+}
+
+/*WRAPPER *********************************************************************** */
+
+
+
+#wrapper{
+	width: 100%;
+	height: 100%;
+	display: flex; 
+	justify-content: center;
+}
+
+#allMultButton {grid-area: allMult;}
+
+#firstGenerator {grid-area: firstGen;}
+#secondGenerator {grid-area: secondGen;}
+#thirdGenerator {grid-area: thirdGen;}
+#fourthGenerator {grid-area: fourthGen;}
+#fifthGenerator {grid-area: fifthGen;}
+#sixthGenerator {grid-area: sixthGen;}
+#seventhGenerator {grid-area: seventhGen;}
+#eighthGenerator {grid-area: eighthGen;}
+
+#firstGeneratorPrestige {grid-area: firstGenPres;}
+#secondGeneratorPrestige {grid-area: secondGenPres;}
+#thirdGeneratorPrestige {grid-area: thirdGenPres;}
+#fourthGeneratorPrestige {grid-area: fourthGenPres;}
+#fifthGeneratorPrestige {grid-area: fifthGenPres;}
+#sixthGeneratorPrestige {grid-area: sixthGenPres;}
+#seventhGeneratorPrestige {grid-area: seventhGenPres;}
+#eighthGeneratorPrestige {grid-area: eighthGenPres;}
+
+#firstExpansionGenerator {grid-area: firstExpGen;}
+#secondExpansionGenerator {grid-area: secondExpGen;}
+#thirdExpansionGenerator {grid-area: thirdExpGen;}
+#fourthExpansionGenerator {grid-area: fourthExpGen;}
+#fifthExpansionGenerator {grid-area: fifthExpGen;}
+#sixthExpansionGenerator {grid-area: sixthExpGen;}
+#seventhExpansionGenerator {grid-area: seventhExpGen;}
+#eighthExpansionGenerator {grid-area: eighthExpGen;}
+
+#expansionPointMult {grid-area: expPointMult;}
+
+#expansionTextContainer {grid-area: expTextCon;}
+
+#allMultButton{
+	background-color: #547480;
+	padding: 30px 0px 30px 0px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+#allMultButton.locked{
+	background-color: #5F0001;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-areas: 
+		"allMult allMult allMult allMult"
+		"firstGen secondGen thirdGen fourthGen"
+		"fifthGen sixthGen seventhGen eighthGen"
+		"firstGenPres secondGenPres thirdGenPres fourthGenPres"
+		"fifthGenPres sixthGenPres seventhGenPres eighthGenPres";
+	width: 60%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.grid-item{
+	background-color: #547480;
+	padding: 40px;
+	margin: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid-item.locked{
+	background-color: #5F0001;
+}
+
+.prestige{
+	background-color: #5A7E6F;
+	padding: 15px;
+}
+
+.prestige.locked{
+	background-color: #5F0001;
+}
+
+.grid-container-expand{
+	display: grid;
+	grid-template-areas: 
+		"expTextCon expTextCon expTextCon expTextCon"
+		"expPointMult expPointMult expPointMult expPointMult"
+		"firstExpGen secondExpGen thirdExpGen fourthExpGen"
+		"fifthExpGen sixthExpGen seventhExpGen eighthExpGen";
+	width: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.grid-container-expand.preExpand{
+	display: none;
+}
+
+.grid-item-expand{
+	background-color: #547480;
+	padding: 40px;
+	margin: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid-item-expand.locked{
+	background-color: #5F0001;
+}
+
+#expansionPointMult.locked {
+	background-color: #5F0001;
+}
+
+#expansionTextContainer{
+	height: 150px;
+	background-color: #303841;
+	padding: 0;
+	cursor: default;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
+#electricityText{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	display: grid;
+	grid-template-columns: auto;
+	
+}
+
+#electricity{
+	vertical-align: middle;
+	display: table-cell;
+	font-size: 30px;
+}
+
+#electricityPerSec{
+	vertical-align: middle;
+	display: table-cell;
+	font-size: 15px;
+}
+
+#expansionPoints{
+	vertical-align: middle;
+	display: table-cell;
+	font-size: 15px;
+}
+
+#preExpansionText{
+	display: none;
+}
+
+#preExpansionText.preExpand{
+	display: flex;
+	font-size: 25px;
+}
+
+#expansionUpgradeContainer{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	width: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.expansionUpgrade{
+	background-color: #547480;
+	padding: 40px;
+	margin: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*FOOTER *********************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+		"empty empty allMult allMult allMult allMult empty empty"
+		"empty empty firstGen secondGen thirdGen fourthGen empty empty"
+		"empty empty fifthGen sixthGen seventhGen eighthGen empty empty"
+		"firstGenPres secondGenPres thirdGenPres fourthGenPres fifthGenPres sixthGenPres seventhGenPres eighthGenPres";
+*/
+
+
+
+
+
+
+
+
+

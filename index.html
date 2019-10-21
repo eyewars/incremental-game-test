@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Garbage Idle Game</title>
+		<link href="styles/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div id="header">	
+			<div id="expansionContainer">
+				<div id="expansionButton" class="" onclick="expand()">
+					<div id="expansionButtonText"></div>
+				</div>
+			</div>
+			<div id="currency">
+				<div id="total">
+					<div id="gold">You have $x</div>
+					<div id="goldPerSec">x Gold Per Second</div>
+				</div>
+				<div class="buttonContainer">
+					<button onclick="showPanel(0, '#547480')">Tab 1</button>
+					<button onclick="showPanel(1, '#547480')">Tab 2</button>
+					<button onclick="showPanel(2, '#547480')">Tab 3</button>
+					<button onclick="showPanel(3, '#547480')">Tab 4</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="wrapper">		
+			<div class="grid-container tabPanel" id="generators">
+				
+				<div class="grid-item" id="allMultButton" onclick="buyAllMult()"></div>
+				
+				<div class="grid-item" id="firstGenerator" onclick="buyGenerator(1)"></div>
+				<div class="grid-item" id="secondGenerator" onclick="buyGenerator(2)"></div>
+				<div class="grid-item" id="thirdGenerator" onclick="buyGenerator(3)"></div>
+				<div class="grid-item" id="fourthGenerator" onclick="buyGenerator(4)"></div>
+				<div class="grid-item" id="fifthGenerator" onclick="buyGenerator(5)"></div>
+				<div class="grid-item" id="sixthGenerator" onclick="buyGenerator(6)"></div>
+				<div class="grid-item" id="seventhGenerator" onclick="buyGenerator(7)"></div>
+				<div class="grid-item" id="eighthGenerator" onclick="buyGenerator(8)"></div>
+				
+				<div class="grid-item prestige" id="firstGeneratorPrestige" onclick="prestige(1)"></div>
+				<div class="grid-item prestige" id="secondGeneratorPrestige" onclick="prestige(2)"></div>
+				<div class="grid-item prestige" id="thirdGeneratorPrestige" onclick="prestige(3)"></div>
+				<div class="grid-item prestige" id="fourthGeneratorPrestige" onclick="prestige(4)"></div>
+				<div class="grid-item prestige" id="fifthGeneratorPrestige" onclick="prestige(5)"></div>
+				<div class="grid-item prestige" id="sixthGeneratorPrestige" onclick="prestige(6)"></div>
+				<div class="grid-item prestige" id="seventhGeneratorPrestige" onclick="prestige(7)"></div>
+				<div class="grid-item prestige" id="eighthGeneratorPrestige" onclick="prestige(8)"></div>
+			</div>
+			
+			<div id="expand" class="tabPanel">
+				<div id="preExpansionText">You need 1e308 Energy</div>
+				<div class="grid-container-expand" id="expansionGenerators">
+					<div class="grid-item-expand" id="expansionTextContainer">
+						<div id="electricityText">
+							<div id="electricity">You have x Electricity</div>
+							<div id="electricityPerSec">You're getting x Electricity per second</div>
+							<div id="expansionPoints">You have x Expansion Points</div>
+						</div>
+					</div>
+					<div class="grid-item-expand" id="expansionPointMult" onclick="epMult()"></div>
+					<div class="grid-item-expand" id="firstExpansionGenerator" onclick="buyExpansionGenerator(1)"></div>
+					<div class="grid-item-expand" id="secondExpansionGenerator" onclick="buyExpansionGenerator(2)"></div>
+					<div class="grid-item-expand" id="thirdExpansionGenerator" onclick="buyExpansionGenerator(3)"></div>
+					<div class="grid-item-expand" id="fourthExpansionGenerator" onclick="buyExpansionGenerator(4)"></div>
+					<div class="grid-item-expand" id="fifthExpansionGenerator" onclick="buyExpansionGenerator(5)"></div>
+					<div class="grid-item-expand" id="sixthExpansionGenerator" onclick="buyExpansionGenerator(6)"></div>
+					<div class="grid-item-expand" id="seventhExpansionGenerator" onclick="buyExpansionGenerator(7)"></div>
+					<div class="grid-item-expand" id="eighthExpansionGenerator" onclick="buyExpansionGenerator(8)"></div>
+				</div>	
+			</div>
+			<div id="expandUpgrade" class="tabPanel">
+				<div id="expansionUpgradeContainer">
+					<div class="expansionUpgrade" id="expUp1"></div>
+					<div class="expansionUpgrade" id="expUp2"></div>
+					<div class="expansionUpgrade" id="expUp3"></div>
+					<div class="expansionUpgrade" id="expUp4"></div>
+					<div class="expansionUpgrade" id="expUp5"></div>
+					<div class="expansionUpgrade" id="expUp6"></div>
+					<div class="expansionUpgrade" id="expUp7"></div>
+					<div class="expansionUpgrade" id="expUp8"></div>
+					<div class="expansionUpgrade" id="expUp9"></div>
+					<div class="expansionUpgrade" id="expUp10"></div>
+					<div class="expansionUpgrade" id="expUp11"></div>
+					<div class="expansionUpgrade" id="expUp12"></div>
+					<div class="expansionUpgrade" id="expUp13"></div>
+					<div class="expansionUpgrade" id="expUp14"></div>
+					<div class="expansionUpgrade" id="expUp15"></div>
+				</div>
+			</div>
+			
+			
+			<div class="tabPanel">Tab 4</div>
+			
+		</div>
+
+			
+		
+		
+		<button onclick="test()">Test</button>
+		<button onclick="save()">Save</button>
+		<button onclick="load()">Load</button>
+		<button onclick="maxAll()">Max</button>
+		
+	</body>
+	<script type="text/javascript" src="scripts/break_eternity.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</html>
+
+
+
+
+
